@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <application title="Quantité de nitrate à Paris" logo="" help="" style="css/themes/peter_river.css" exportpng="false" showhelp="false" coordinates="true" measuretools="false" togglealllayersfromtheme="false"></application>
+  <mapoptions maxzoom="20" projection="EPSG:3857" center="265676.18562347844,6252575.077359088" zoom="12"/>
+<baselayers style="default">
+  <baselayer
+    visible="true"
+    id="positron"
+    thumbgallery="img/basemap/positron.png"
+    title="CartoDb"
+    label="Positron"
+    type="OSM"
+    url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+    attribution="Map tiles by  &lt;a href=&quot;https://cartodb.com/attributions&quot;&gt;CartoDb&lt;/a&gt;, under  &lt;a href=&quot;https://creativecommons.org/licenses/by/3.0/&quot;&gt;CC BY 3.0 &lt;/a&gt;"></baselayer>
+    <baselayer
+      visible="false"
+      id="esriworldimagery"
+      thumbgallery="img/basemap/esriworldwide.jpg"
+      title="Esri world imagery"
+      label="Esri world imagery"
+      type="OSM"
+      url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+      attribution="Esri world imagery"></baselayer>
+        </baselayers>
+    <proxy url=""/>
+    <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban" attribution="La recherche d'adresse est un service proposé par l'API adresse.data.gouv.fr"/>
+    <themes mini="false">
+      <theme id="theme-20181119143706" name="Valeur Nitrate" collapsed="true" icon="flask">
+        <layer
+          id="EDP:PT_PREL_NITRATE"
+          name="PT_PREL_NITRATE"
+          type="wms"
+          url="http://localhost/geoserver/ows"
+          visible="true"
+          attribution="Eau de Paris"
+          metadata=""
+          metadata-csw=""
+          infoformat="application/vnd.ogc.gml"
+          timefilter="true"
+          timeinterval="month"
+          timecontrol="slider"
+          timevalues="2017-01,2017-02,2017-03,2017-4,2017-06,2017-12"
+          timemin="2017-01"
+          timemax="2017-12"
+          queryable="true">
+          <template url="app/nitrate/qualite_nitrate.mst"/>
+        </layer>
+      </theme>
+    </themes>
+</config>

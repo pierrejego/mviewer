@@ -1,0 +1,10 @@
+{{#features}}
+  <li class="item">
+    <h3>Pt de prélèvement : {{CODE}}</h3>
+    <ul>
+      <li><strong>Date de prélèvement</strong> : {{DATE_PREL}}</li>
+      <li><strong>{{BULLETIN}}</strong> : {{RESULT_REE}} {{UNIT}}</li>
+    </ul>
+    <hr />
+  </li>
+{{/features}}
